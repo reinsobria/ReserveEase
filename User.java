@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-// Abstract parent class of Customer and Administrator
 public abstract class User {
-    private String fullName;
-    private String username;
-    private String password;
+    String fullName;
+    String username;
+    String password;
 
     public User(String fullName, String username, String password) {
         this.fullName = fullName;
@@ -23,6 +22,5 @@ public abstract class User {
         System.out.println("Logged out. Goodbye, " + fullName + "!");
     }
 
-    // Each subclass shows its own menu (polymorphism)
     public abstract void displayMenu(Scanner sc, ReservationManager manager);
 }
